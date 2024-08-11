@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../index.ts"],
+  "sourcesContent": ["import { Context, APIGatewayProxyResult } from 'aws-lambda';\n\ninterface IMessage {\n    message: string\n}\n\nexport const handler = async (event: IMessage, context: Context): Promise<APIGatewayProxyResult> => {\n    \n  return {\n      statusCode: 200,\n      body: JSON.stringify({\n          message: event.message,\n      }),\n   };\n};"],
+  "mappings": "yaAAA,IAAAA,EAAA,GAAAC,EAAAD,EAAA,aAAAE,IAAA,eAAAC,EAAAH,GAMO,IAAME,EAAU,MAAOE,EAAiBC,KAEtC,CACH,WAAY,IACZ,KAAM,KAAK,UAAU,CACjB,QAASD,EAAM,OACnB,CAAC,CACJ",
+  "names": ["hello_exports", "__export", "handler", "__toCommonJS", "event", "context"]
+}
